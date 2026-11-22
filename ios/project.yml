@@ -1,0 +1,33 @@
+name: PhonePad
+options:
+  bundleIdPrefix: com.phonepad
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  PhonePad:
+    type: application
+    platform: iOS
+    sources:
+      - PhonePad
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.phonepad.app
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+    info:
+      path: PhonePad/Info.plist
+      properties:
+        CFBundleDisplayName: PhonePad
+        UILaunchScreen: {}
+        UIRequiresFullScreen: true
+        UIStatusBarHidden: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSCameraUsageDescription: Scan the QR code shown by PhonePad on your PC.
+        NSLocalNetworkUsageDescription: PhonePad connects to your PC on your local network to send controller input.
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
